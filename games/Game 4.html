@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Game 4</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		    /*This function only moves the blue div element.*/
+            $(document).ready(function(){
+			     $("html").keydown(function(e){
+					 $("#divone").css("position", "absolute");
+					 console.log(e.keyCode); /*This allows me to see which ASCII number I get when a button is pressed.*/
+					 switch(e.which){
+					     /*Left and right arrow keys*/
+						 case 37:
+						     $("#divone").stop().animate({
+					             left: '-=250px'
+					         });
+							 break;
+					     /*I reversed the plus and minus because I want it to go LEFT when the LEFT button is clicked*/
+						 case 39:
+						     $("#divone").stop().animate({
+					             left: '+=250px'
+					         });
+							 break;
+					     /*Up and down arrow keys keys*/
+					     case 38:
+						     $("#divone").stop().animate({
+					             top: '-=250px'
+					         });
+							 break;
+					     /*I reversed the plus and minus because I want it to go UP when the UP button is clicked*/
+						 case 40:
+						     $("#divone").stop().animate({
+					             top: '+=250px'
+					         });
+							 break;
+                         case 65:
+						     $("#divtwo").stop().animate({
+					             left: '-=250px'
+					         });
+							 break;
+                         case 68:
+						     $("#divtwo").stop().animate({
+					             left: '+=250px'
+					         });
+							 break;
+                         case 87:
+						     $("#divtwo").stop().animate({
+					             top: '-=250px'
+					         });
+							 break;
+                         case 83:
+						     $("#divtwo").stop().animate({
+					             top: '+=250px'
+					         });
+							 break;
+                         case 27: /*This is the ESCAPE button.*/
+						     window.close();
+							 break;
+					 }
+				 });
+			});
+                function collision($divone, $divtwo) {
+                      var x1 = $divone.offset().left;
+                      var y1 = $divone.offset().top;
+                      var h1 = $divone.outerHeight(true);
+                      var w1 = $divone.outerWidth(true);
+                      var b1 = y1 + h1;
+                      var r1 = x1 + w1;
+                      var x2 = $divtwo.offset().left;
+                      var y2 = $divtwo.offset().top;
+                      var h2 = $divtwo.outerHeight(true);
+                      var w2 = $divtwo.outerWidth(true);
+                      var b2 = y2 + h2;
+                      var r2 = x2 + w2;
+        
+                      if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+                      document.write("<p style='font-size: 120px; background-color: red; text-align: center; color: gold;'><u>FIGHT</u></p>");
+					  document.writeln("<p style='font-size: 48px;'>Read the question below.</p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='password' id='player1' /> Player 1</p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='password' id='player2' /> Player 2</p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='submit' value='Submit Answers/Load Questions' onclick='contest()' /></p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='submit' value='Close the Window' onclick='closewin()' /></p>");
+                      
+                    }
+            window.setInterval(function() {
+                $('#result').text(collision($('#divone'), $('#divtwo')));
+            }, 200);
+			         function closewin(){
+					     window.close();
+					 }
+                     function contest(){
+					      /*var choose = ["game1", "game2",]
+						  var rand = choose[Math.floor(Math.random() * choose.length)];
+						  console.log(rand);*/
+						  var p1 = document.getElementById('player1').value;
+			    		  var p2 = document.getElementById('player2').value;
+						  /*if(rand == "game1"){						  
+		    				  alert("You are playing: " + rand)*/
+							  if(p1.length == 0 && p2.length == 0){
+							      $("body").append("<p style='font-size: 48px; color: white;'><u><b>Which IND/BMT model car has the number #5555?</b></u></p>");
+							  }
+				    		  if(p1 == "R46" && p2 != "R46"){
+					    	      $("body").css("background-color" ,"blue");
+						    	  alert("Player 1 WINS");
+							      window.close();
+					    	  }
+						      else if(p1 != "R46" && p2 == "R46"){
+						          $("body").css("background-color" ,"chartreuse");
+	    						  alert("Player 2 WINS");
+		    					  window.close();
+			    		      }
+				    		  else if(p1 != "R46" && p2 != "R46"){
+					    	      $("body").css("background-color" ,"red");
+						    	  alert("Put the right answer in the designated boxes.");
+					    	  }
+						      else{
+						          $("body").css("background-color" ,"teal");
+							      alert("Player 1 and Player 2 both WIN");
+							      window.close();
+						      }
+						  }
+						  /*else if( rand == "game2"){
+						      alert("You are playing: " + rand)
+							  if(p1.length == 0 && p2.length == 0){
+							      $("body").append("<p style='font-size: 48px; color: white;'><u><b>What line did the EE run on?</b></u></p>");
+							  }
+							  if(p1 == "Broadway" && p2 != "Broadway"){
+					    	      $("body").css("background-color" ,"blue");
+						    	  alert("Player 1 WINS");
+							      window.close();
+					    	  }
+						      else if(p1 != "Broadway" && p2 == "Broadway"){
+						          $("body").css("background-color" ,"chartreuse");
+	    						  alert("Player 2 WINS");
+		    					  window.close();
+			    		      }
+				    		  else if(p1 != "Broadway" && p2 != "Broadway"){
+					    	      $("body").css("background-color" ,"red");
+						    	  alert("Put the right answer in the designated boxes.");
+					    	  }
+						      else{
+						          $("body").css("background-color" ,"teal");
+							      alert("Player 1 and Player 2 both WIN");
+							      window.close();
+						      }
+						  }
+						  else{
+						      alert("This game has not been available yet!!!");
+						  }
+					  }*/
+
+
+
+window.setInterval(function() {
+    $('#result').text(collision($('#div1'), $('#div2')));
+}, 200);
+
+
+		</script>
+	</head>
+	<body style="background-color: black;">
+        <div style="background-color: blue; width: 50px; height: 50px;" id="divone"></div>
+        <p style="font-size: 40px; color: white;">Press Escape to exit and close the window.</p>
+        <p style="font-size: 40px; color: white;">Move the blue square with arrow keys. This is player 1. Move the green square with WASD, and you are player 2. See what happens if they touch each other.</p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div style="width: 50px; height: 50px; position: absolute; background-color: chartreuse;" id="divtwo">
+            <!-- <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/NYCS-bull-trans-R.svg/240px-NYCS-bull-trans-R.svg.png"/> Uncomment this later-->
+        </div>
+	</body>
+</html>
