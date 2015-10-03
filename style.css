@@ -53,6 +53,20 @@ a{
 	font-size: 24px;
 	color: black;
 }
+#sta-title{
+    color: black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	background-color: #FFFFFF;
+}
+#sta-title:hover{
+    color: #00FF00;
+	opacity: 0.5;
+	-webkit-transition: opactity 0.5;
+	-moz-transition: opactity 0.5;
+	transition: opactity 0.5;
+}
 #left{
     width: 49.5%;
 	background-color: #E68A00;
@@ -84,5 +98,9 @@ figcaption{
 }
 #misc{
     background-color: black;
+	color: white;
+}
+#misc a{
+    text-decoration: none;
 	color: white;
 }

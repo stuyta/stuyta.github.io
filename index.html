@@ -12,11 +12,14 @@
 		<script type="text/javascript">
 		    $(document).ready(function(){
 			    $("#container").tabs({show: 'fade', hide: 'fade'});
+				$("sta-title").click(function(){
+				    location.reload();
+				});
 			});
 		</script>
 	</head>
 	<body>
-	    <h1>Stuyvesant Transit Association (STA)</h1>
+	    <h1 id="sta-title">Stuyvesant Transit Association (STA)</h1>
 		<div id="container">
 		    <ul class="tabsul">
 			    <li class="disp"><a href="#homepage" class="navs">Homepage</a></li>
@@ -24,24 +27,26 @@
 				<li class="disp"><a href="#gallery" class="navs">Gallery</a></li>
 				<li class="disp"><a href="#staff" class="navs">Staff</a></li>
 				<li class="disp"><a href="#rules" class="navs">Rules</a></li>
-				<li class="disp"><a href="#misc" class="navs">Other</a></li>
+				<li class="disp"><a href="#misc" class="navs">Games</a></li>
 			</ul>
 			<div id="homepage">
 			    <h2>Welcome!</h2>
+				<h3>Click each tab to learn more about the website!</h3>
 			</div>
 			<div id="about">
 			    <h2>About</h2>
 				<h3>Mission Statement:</h3>
-				<p>Our mission is to help the people of New York City truly appreciate a piece of its landscape that most of us take for granted. We also are going to educate the people about what makes our city unique as a whole.</p>
+				<p>Our mission is to help the people of New York City truly appreciate a piece of its landscape that most of us take for granted. We also are going to educate the people about what makes our city unique as a whole. </p>
+				<p><u>We aim to make the commute of every transit passenger as fast as possible and to make it overall better than before!!!</u></p>
 				<h3>Some Activities:</h3>
 				<ul>
 				    <li>Participate in discussions about the system</li>
 			    	<li>Make theories about the system</li>
-				    <li>Discuss abandoned stations like <strong><u>76th</u> Street Station!</strong></li>
+				    <li>Discuss abandoned stations like <b><u>76th</u> Street Station!</b></li>
 				    <li>Get tickets and updates to fun events like the Nostalgia Trains and the New York City Transit Museum</li>
 					<li>We might host workshops for making paper buses!</li>
 					<li>Talk about other transit systems, such as PATH, WMATA, and the Chicago L</li>
-					<li>We can even discuss topics such as aviation!</li>
+					<li>We can even discuss topics such as aviation or any other mode of transit you have in mind!!!</li>
 				</ul>
 			</div>
 			<div id="gallery">
@@ -69,15 +74,57 @@
 			</div>
 			<div id="rules">
 			    <h2>Rules</h2>
+				<p><b><u>By using this website: you hereby agree to the following terms and rules:</u></b></p>
+				<br>
+				<p><b>PRIVACY POLICY: This website is not intended to collect information from any visitor, except for who exactly is browsing it. Google Analytics collects data on who is browsing.</b></p>
+				<p><u>Definitions:</u></p>
+				<ol>
+			    	<li>Orderly: Using this website for no malicious intent</li>
+					<li>"You": You, the user viewing this page and website</li>
+					<li>Problem: Anything that goes wrong in the website, such as malicious content, users, errors, or bug fixes.</li>
+					<li>Slander: False rumors or content targeted towards a person, a certain group of people, or to the club.</li>
+					<li>Staff: Members of the club with a certain position such as President, Vice President, Treasurer, and GitHub collaborators maintaining the website.</li>
+					<li>Website: Includes this entire website and associated webpages, as well as the Facebook Group.</li>
+				</ol>
+				<p><u>Terms and Conditions</u></p>
+				<ol>
+				    <li>This website is intended to be used in an orderly manner in order to create and maintain a successful community. Here are the rules:</li>
+					<ul>
+				    	<li>Under absolutely no circumstances is slander allowed. If a person is found creating slander, he/she will be barred from the club until further notice and <b>the incident will be reported to Mr. Moran and the Student Union.</b></li>
+						<li>Malicious content is strictly prohibited. If anybody is found creating and spreading malicious content, then he/she will be barred from the club until further notice and will be suspended from the club. <b>The incident will be reported to Mr. Moran and the Student Union.</b></li>
+						<li>Infringement of the privacy of the staff or the student members will <b>automatically</b> result in that person being barred from the club and their suspension from the club.</li>
+					</ul>
+					<li>You, by using this website, <b>agree to all the terms and conditions</b> of this page, which applies to every part of the website. Failure to read this page does not constitute an excuse for violating any of the rules mentioned by the Student Union, this website, and Stuyvesant High School.</li>
+					<li>Stuyvesant Transit Association is under the jurisdiction of the Stuyvesant Student Union, so all of its rules will apply here as well.</li>
+					<ul>
+					    <li>Any specific person who fails to uphold Student Union rules will be suspended from the club.</li>
+						<li>Failure to uphold its rules and honor code can or will result in the suspension of Stuyvesant Transit Association.</li>
+					</ul>
+					<li>You can view the rules <a href="http://www.stuysu.org/assets/documents/Club%20-%20Pub%20Rules.pdf">HERE</a></li>
+					<li>If there is a problem in the website, fill out the form below and submit it! I will find the problem and fix it!</li>
+				</ol>
+				<iframe src="https://docs.google.com/forms/d/1FQ2XdDk13zYA_wcsWX5NpzF22LqNLarYWuAxlhbKEqo/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+				<p><b><u>STAFF ONLY SECTION:</u></b></p>
+				<p><u>Impeachment:</u></p>
+				<ul>
+				    <li>If a staff member does not abide to his or her position, he/she may be impeached.</li>
+					<li>If a staff member does not abide to the rules above, then he gets a strike if a complaint is filed by either a member of the club or by the Student Union. If a staff member progressively fails to do his/her job or gets three strikes, then he can be subject to impeachment. If he/she is found guilty, then the person will be removed from his position and an election will take place for his/her replacement.</li>
+				</ul>
 			</div>
 			<div id="misc">
-			    <h2>Other</h2>
+			    <h2>Games</h2>
+				<!--<input type="submit" onclick="game" value="Games 1 and 2" style="background-color: gold; font-size: 18px; height: 1.8em; width: 100%;">-->
+				<ul style="list-style: none; text-align: center;">
+					<li style="display: inline-block; padding-right: 40px;"><a href="games/Game 3.html">Game 3</a></li>
+					<li style="display: inline-block;"><a href="games/Game 4.html">Game 4</a></li>
+					<li style="display: inline-block; padding-left: 40px;"><a href="games/Game 5.html">Game 5</a></li>
+				</ul>
 			</div>
 		</div>
 		<br>
 		<br>
 		<div>
-			<h3 style="background-color: gold;">Related Websites:
+			<h3 style="background-color: gold; clear:both;">Related Websites:
 		    	<a href="http://www.mta.info/"style="padding-left: 40px; background-color: transparent; border: none;">MTA Website</a>
      			<a style="padding-left: 40px; background-color: transparent; border: none;" href="http://www.nycsubway.org">NYCSubway.org</a>
 	    		<a style="padding-left: 40px; background-color: transparent; border: none;" href="http://www.ttmg.org">t t m g.org</a>
