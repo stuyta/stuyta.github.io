@@ -71,11 +71,13 @@ a{
     width: 49.5%;
 	background-color: #E68A00;
 	float: left;
+	overflow-y: auto;
 }
 #right{
     width: 49.5%;
 	background-color: #FFB733;
 	float: right;
+	overflow-y: auto;
 }
 figcaption{
     font-size: 24px;
